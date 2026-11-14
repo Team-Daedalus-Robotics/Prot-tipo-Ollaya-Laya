@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 load_dotenv(PROJECT_ROOT / ".env")
 
-DATABASE_EXTERN_URL = os.getenv("DATABASE_URL", "sqlite:///./spaceapps.db")
+DATABASE_EXTERN_URL = os.getenv("DATABASE_URL", "sqlite:///teste.db")
 #adiconar database interno
 API_KEY = os.getenv("API_KEY", os.getenv("TYPESAFE_API_KEY", "local"))
 BASE_URL = os.getenv(
