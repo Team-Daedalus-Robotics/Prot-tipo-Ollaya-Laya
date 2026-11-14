@@ -7,4 +7,4 @@ from laya.config import DATABASE_URL
 
 
 engine = create_engine(DATABASE_URL)
-SessionLocal = sessionmaker(bind=engine, expire_on_commit=False)
+session = sessionmaker(bind=engine, expire_on_commit=False)

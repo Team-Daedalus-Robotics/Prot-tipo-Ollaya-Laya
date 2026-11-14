@@ -2,15 +2,10 @@
 
 from sqlalchemy import MetaData, Table
 from db.engine import engine
-
-from sqlalchemy.orm import DeclarativeBase
+from models import Evento
 
 metadata = MetaData(engine)
 
-eventos = Table("eventos", metadata,autoload_with=engine)
+eventos = Table("evento", metadata,autoload_with=engine)
 medidas = Table("medidas", metadata, autoload_with=engine)
 rotacoes = Table("rotacoes", metadata, autoload_with=engine)
-medidas = Table("medidas", metadata, autoload_with=engine)
-
-class Base(DeclarativeBase):
-    pass
