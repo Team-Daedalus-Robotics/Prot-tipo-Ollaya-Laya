@@ -7,7 +7,13 @@ authors = [
     { name = "leandro", email = "leandroep10@gmail.com" }
 ]
 requires-python = ">=3.12"
-dependencies = ["python-dotenv>=1.0", "sqlalchemy>=2.0", "typesafe-sdk>=0.7.1"]
+dependencies = [
+    "laya>=0.4.31",
+    "python-dotenv>=1.0",
+    "requests>=2.34.2",
+    "sqlalchemy>=2.0",
+    "typesafe-sdk>=0.7.1",
+]
 
 [project.scripts]
 spaceapps = "spaceapps:main"

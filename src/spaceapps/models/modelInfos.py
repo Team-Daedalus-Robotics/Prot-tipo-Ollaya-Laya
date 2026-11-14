@@ -16,4 +16,4 @@ carregar_env()
 
 BASE_URL = os.getenv("TYPESAFE_BASE_URL", "http://localhost:11435")
 API_KEY = os.getenv("TYPESAFE_API_KEY", "local")
-MODEL = os.getenv("TYPESAFE_DEFAULT_MODEL", "laya")
+MODEL = os.getenv("TYPESAFE_DEFAULT_MODEL", "laya:multilingual")
