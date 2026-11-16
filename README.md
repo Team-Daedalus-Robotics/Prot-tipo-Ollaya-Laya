@@ -1,12 +1,10 @@
 # Laya
 
-Aplicação de linha de comando que lê registros do banco configurado e usa o
-endpoint TypeSafe `/api/decide` para avaliar se o contexto contém dados
-suficientes para responder a uma pergunta.
+A command-line application that reads records from the configured database and uses the TypeSafe `/api/decide` endpoint to evaluate whether the context contains sufficient information to answer a question.
 
-## Configuração
+## Configuration
 
-Crie um arquivo `.env` na raiz do projeto:
+Create a `.env` file in the project root:
 
 ```dotenv
 DATABASE_URL=sqlite:///./config/db/db.sqlite3
@@ -16,17 +14,14 @@ MODEL=laya:multilingual
 QUERY_LIMIT=100
 ```
 
-`DATABASE_URL` pode apontar para outro banco suportado pelo SQLAlchemy. O
-repositório reflete as tabelas existentes e lê até `QUERY_LIMIT` linhas de cada
-tabela.
+`DATABASE_URL` can point to another database supported by SQLAlchemy. The repository reflects the existing tables and reads up to `QUERY_LIMIT` rows from each table.
 
-## Executar
+## Running
 
 ```sh
 uv run laya
 ```
 
-O processo solicita uma pergunta, consulta o banco e mostra a probabilidade de
-o contexto conter informação suficiente. `/api/decide` retorna decisões
-tipadas (`choice`, `score` ou `noul`), não texto gerado; para receber respostas
-livres em português, será necessário conectar um endpoint generativo.
+The process prompts the user for a question, queries the database, and displays the probability that the context contains sufficient information.
+
+`/api/decide` returns typed decisions (`choice`, `score`, or `noul`), not generated text. To receive free-form responses in Portuguese, a generative endpoint must be connected.
